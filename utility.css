@@ -1,0 +1,207 @@
+
+@import url('https://fonts.cdnfonts.com/css/poppins');
+                
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;                 
+}
+body{
+    background: linear-gradient(30deg, rgb(0, 81, 255), lightgreen);
+}
+.container{
+    width: 90%;
+    margin: auto;
+}
+a{
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.nav-btn{
+    border: 2px solid white;
+    padding: 8px 16px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.nav-btn span{
+    position: absolute;
+    bottom:0;
+    left:0;
+    width: 100%;
+    height: 0%;
+    background-color: white;
+    color: transparent;
+    transition: .2s ease-in;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav-btn:hover span{
+    height: 100%;
+    color: black;
+}
+
+@media (max-width: 768px){
+    .container{
+        width: 90%;
+        margin: auto;
+    }
+    .header{
+        padding: 20px 0;
+    }
+    .navbar li{
+        padding-right: 20px;
+    }
+    .nav-link{
+        font-size: 16px;
+    }
+    .brand-name{
+        font-weight: bold;
+        font-size: 20px;
+    }
+    .toggle{
+        display: block;
+        position: absolute;
+        right:5%;
+        top: 20px;
+        cursor: pointer;
+    }
+    .nav-container{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .nav-btn{
+        position: absolute;
+        top: 20px;
+        right: 10%;
+        padding: 0 10px;
+        border: none;
+        font-size: 14px;
+    }
+    .nav-btn span{
+       display: none;
+    }
+    .nav-btn:hover span{
+        height: 100%;
+        color: black;
+    }
+    .navbar{
+        display: none;
+        flex-direction: column;
+        margin-top: 20px;
+        height: 100vh;
+    }
+    .navbar li{
+        margin-bottom: 30px;
+        transform: translateX(-150px);
+    }
+    .navbar.active{
+        display: block;
+    }
+    .wave-con .container h1{
+        margin-top: 85%;
+        font-size: 30px;
+        color: white;
+    }
+    .wave-con .container h2{
+        margin-top: 15%;
+        font-size: 24px;
+        color: black;
+    }
+    .hero2 .container h3{
+        font-size: 28px;
+        color: white;
+        margin-top: 20px;
+        font-weight: 500;
+    }
+    .circle-anim{
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%,-50%) scale(1);
+        background: linear-gradient(30deg, rgb(0, 81, 255), lightgreen);
+        animation: expand 5s alternate;
+    }
+    .anim{
+        animation: movin 2s linear forwards;
+       
+    }
+    .l1.anim{
+        animation-delay: .5s;
+    }
+    .l2.anim{
+        animation-delay: 1s;
+    }
+    .l3.anim{
+        animation-delay: 1.5s;
+    }
+    .l4.anim{
+        animation-delay: 2s;
+    }
+    .l5.anim{
+        animation-delay: 2.5s;
+    }
+    .l6.anim{
+        animation-delay: 3s;
+    }
+    @keyframes movin {
+        from{
+            transform: translateX(-150px);
+            opacity: 0;
+        }to{
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+    .header img{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: none;
+        z-index: -1;
+        opacity: .7;
+        animation: header 2s alternate;
+    }
+    @keyframes header {
+        from{
+            transform: scale(1.2);
+        }to{
+            transform: scale(1);
+        }
+    }
+    .service h4{
+        font-size: 14px;
+    }
+    .our-service li{
+        margin-bottom: 40px;
+        font-size: 20px;
+        cursor: pointer;
+        transition: transform .5s ease-in-out;
+    }
+    .hero{
+        width: 100%;
+        height: 80vh;
+       
+    }
+    .hero2{
+        width: 100%;
+        height: 80vh;
+       
+    }
+}

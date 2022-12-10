@@ -1,0 +1,258 @@
+/* -----------Navbar Section------------ */
+.header{
+    width: 100%;
+    background-color: black;
+    color: white;
+    overflow: hidden;
+    position: fixed;
+    z-index: 99;
+}
+.header img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: -1;
+    opacity: .7;
+    animation: header 3s alternate;
+}
+@keyframes header {
+    from{
+        transform: scale(1.2);
+    }to{
+        transform: scale(1);
+    }
+}
+.brand-name{
+    font-weight: bold;
+    font-size: 24px;
+}
+.brand-name span{
+    color: lightgreen;
+    font-weight: 500;
+}
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 20px 0;
+}
+.navbar li{
+    padding-right: 50px;
+}
+#hidden{
+    opacity: 0;
+}
+.scroll-anim{
+    opacity: 0;
+    transform: translateY(30px);
+    animation: scroll 1s linear forwards;
+}
+@keyframes scroll {
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.hero2 h3.scroll-anim{
+    animation-delay: .5s;
+}
+.hero2 svg.scroll-anim{
+    animation-delay: 1s;
+}
+.nav-link{
+    position: relative;
+}
+.nav-link::before{
+    content:'';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: lightgreen;
+    transition: .3s ease-in-out;
+}
+.nav-link:hover::before{
+    width: 100%;
+}
+.toggle{
+    font-size: 24px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    
+}
+.open, .close{
+    display: none;
+}
+/* --------------Hero section------------------- */
+.hero{
+    width: 100%;
+    height: 100vh;
+   
+}
+.hero2{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+   
+}
+.wave-con{
+    position: relative;
+    width:100%;
+    height: 50vh;
+    background-color: white;
+    z-index: 10;
+}
+.wave{
+    position: absolute;
+    top:50vh;
+    width: 100%;
+    height: 50px;
+    left: 0;
+    transform: rotate(180deg);
+    background:url('https://front-end-noobs.com/jecko/img/wave-bot.png');
+    background-size: 2000px 50px;
+    animation: wave 5s alternate-reverse infinite;
+    }
+
+    @keyframes wave {
+        0%{
+            background-position-x: 2000px;
+        }
+        100%{
+            background-position-x: 0px;
+        }
+        
+    }
+.wave-con .container{
+    padding-top: 100px;
+    align-items: center;
+    justify-content: flex-start;
+}
+.wave-con .container h2{
+    margin-top: 8%;
+    font-size: 30px;
+}
+.wave-con .container h2 span{
+    color: lightgreen;
+    font-weight: 500;
+}
+.wave-con .container h1{
+    margin-top: 150px;
+    font-size: 56px;
+    color: white;
+}
+.wave-con .container h1 i{
+  font-family: sans-serif;
+}
+.hero2 .container h3{
+    font-size: 48px;
+    color: white;
+    font-weight: 500;
+    padding-top: 200px;
+}
+
+.circle-anim{
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    z-index: -1;
+    border-radius: 50%;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1);
+    background: linear-gradient(30deg, rgb(0, 81, 255), lightgreen);
+    animation: expand 5s alternate;
+}
+@keyframes expand {
+    0%{
+        background: linear-gradient(30deg, rgb(0, 81, 255), lightgreen);
+        transform: translate(-50%,-50%) scale(2.5);
+    }100%{
+        background: linear-gradient(30deg, rgb(0, 81, 255), lightgreen);
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.btn{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid white;
+    line-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 100px;
+    margin-top: 40px;
+    transition: .5s ease-in-out;
+    }
+svg{
+    margin-left: -122px; 
+    transition: .5s ease-in-out;
+}
+.btn:hover svg{
+    width: 135px !important;
+}
+.btn:hover{
+    border: 2px solid darkgrey;
+}
+/* -----------------Service---------------- */
+.service{
+    padding: 40px 0;
+    width: 100%;
+    min-height: 60vh;
+    position: relative;
+    z-index: 10;
+}
+.service img{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: -1;
+    object-fit: cover;
+    background-position: center;
+    background-size: contain;
+    opacity: .9;
+    transition: all ease-in-out;
+}
+.our-service{
+    padding: 0;
+    margin-top: 20px;
+    color: white;
+}
+.service h4{
+    font-size: 20px;
+    color: lightgray;
+    font-weight: 400;
+}
+.our-service li{
+    margin-bottom: 50px;
+    font-size: 40px;
+    cursor: pointer;
+    transition: transform .5s ease-in-out;
+}
+.our-service i{
+    margin-left: 20px;
+}
+.our-service li:hover{
+    transform: translateX(30px);
+    color: black;
+}
