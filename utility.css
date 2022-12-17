@@ -148,7 +148,7 @@ li{
         display: block;
     }
     .wave-con .container h1{
-        margin-top: 85%;
+        margin-top: 65%;
         font-size: 30px;
         color: white;
     }
@@ -173,6 +173,7 @@ li{
         transform: translate(-50%,-50%) scale(1);
         background: linear-gradient(30deg, rgb(0, 81, 255), lightgreen);
         animation: expand 5s alternate;
+        transition: all 1s ease-in-out;
     }
     .anim{
         animation: movin 2s linear forwards;
