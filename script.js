@@ -69,3 +69,29 @@ hiddenElements.forEach(element=>{
         observer.observe(element);
 })
 
+//wallpaper display upon link click
+const displayBtns=document.querySelectorAll('.wallpaper-btn');
+const wallpapers=document.querySelectorAll('.img');
+const sections=document.querySelector('.location');
+
+displayBtns.forEach(btn=>{
+        btn.addEventListener('click', function(){
+                let currentBtn=document.querySelectorAll('.active-btn');
+                currentBtn[0].className=currentBtn[0].className.replace('active-btn','');
+                this.className+=' active-btn'
+        })
+
+        sections.addEventListener('click', function(e){
+                let id=e.target.dataset.id;
+                if(id){
+                        wallpapers.forEach(wallpaper=>{
+                                wallpaper.classList.remove('current')
+                        })
+                        
+                        const element=document.getElementById(id);
+                        element.classList.add('current')
+                }
+        })
+})
+
+

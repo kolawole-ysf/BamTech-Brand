@@ -262,3 +262,67 @@ svg{
     transform: translateX(30px);
     color: black;
 }
+/* -------------location section--------------- */
+.location{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.wallpaper{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+}
+.img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    transform: translateX(100%);
+}
+.img1, .img2, .img3, .img4, .img5{
+    display: none;
+    transform: translateX(0);
+}
+.current{
+    display: block;
+    animation: slidein 1s linear;
+}
+@keyframes slidein {
+    from{
+        transform: translateX(100%);
+    }to{
+        transform: translateX(0);
+    }
+    
+}
+.location-nav{
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+    left: 0;
+    bottom: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: black;
+    opacity: .7;
+}
+.location-nav span{
+    font-size: 20px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 20px 0;
+
+}
+.active-btn{
+    color: lightgreen!important;
+}
+.location-nav span:hover{
+    opacity: .7;
+}
