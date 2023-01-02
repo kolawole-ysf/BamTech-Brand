@@ -277,6 +277,19 @@ li{
         padding: 10px 0;
     
     }
+    .location .container{
+        z-index: 9999;
+        padding-top: 50px;
+    }
+    .location .container h2{
+        font-size: 28px;
+    }
+    .location .container p{
+        font-size: 14px;
+    }
+    em{
+        font-weight: bold;
+    }
     
     
 }

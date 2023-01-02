@@ -94,4 +94,15 @@ displayBtns.forEach(btn=>{
         })
 })
 
+//Auto type animation
 
+const typed=new Typed('.auto-type',{
+        strings:['Dwell.','Design.','Develop.'],
+        typeSpeed: 200,
+        backSpeed: 200,
+        loop:true
+});
+
+//gsap animation
+const tl=gsap.timeline({default: {duration: 0.75}})
+tl.fromTo('.wallpaper-btn',{opacity: 0, y: -50},{opacity: 1, y: 0, ease: Bounce.easeOut})
