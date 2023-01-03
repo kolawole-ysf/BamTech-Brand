@@ -5,7 +5,7 @@
     color: white;
     overflow: hidden;
     position: fixed;
-    z-index: 99;
+    z-index: 999;
 }
 
 .header img{
@@ -74,10 +74,10 @@
 .hero2 svg.scroll-anim{
     animation-delay: 1s;
 }
-.nav-link{
+.nav-links{
     position: relative;
 }
-.nav-link::before{
+.nav-links::before{
     content:'';
     position: absolute;
     top: 100%;
@@ -87,8 +87,9 @@
     background-color: lightgreen;
     transition: .3s ease-in-out;
 }
-.nav-link:hover::before{
+.nav-links:hover::before{
     width: 100%;
+    color: white;
 }
 /* .toggle{
     font-size: 24px;
@@ -251,7 +252,7 @@ svg{
 }
 .our-service li{
     margin-bottom: 50px;
-    font-size: 40px;
+    font-size: 36px;
     cursor: pointer;
     transition: transform .5s ease-in-out;
 }
@@ -274,10 +275,12 @@ svg{
 }
 .location .container h2{
     font-size: 44px;
+    color: black;
 
 }
 .location .container p{
     font-size: 20px;
+    color: black;
 }
 em{
     font-weight: bold;
@@ -318,7 +321,7 @@ em{
 .location-nav{
     width: 100%;
     position: absolute;
-    z-index: 999;
+    z-index: 99;
     left: 0;
     bottom: 100px;
     display: flex;
@@ -328,12 +331,12 @@ em{
     opacity: .7;
 }
 .location-nav span{
-    font-size: 20px;
+    font-size: 16px;
     color: white;
     text-transform: uppercase;
     font-weight: 600;
     cursor: pointer;
-    padding: 20px 0;
+    padding: 4px 0;
 
 }
 .active-btn{
@@ -342,3 +345,33 @@ em{
 .location-nav span:hover{
     opacity: .7;
 }
+/* ------------Testimony Section----------- */
+.testimony{
+    width: 100%;
+    height: 80vh;
+    background-color: whitesmoke;
+}
+.card-img{
+    width: 30%;
+}
+
+.card-text{
+    width: 70%;
+}
+.cardy{
+    position: relative!important;
+}
+.car-btn{
+    width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: absolute;
+   bottom: 20%;
+}
+.car-btn button{
+    margin-left: 80px;
+    border: 0;
+    color: lightgreen;
+}
+

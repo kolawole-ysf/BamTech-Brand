@@ -105,4 +105,12 @@ const typed=new Typed('.auto-type',{
 
 //gsap animation
 const tl=gsap.timeline({default: {duration: 0.75}})
-tl.fromTo('.wallpaper-btn',{opacity: 0, y: -50},{opacity: 1, y: 0, ease: Bounce.easeOut})
+const wallBtns=document.querySelectorAll('.wallpaper-btn')
+wallBtns.forEach(button=>{
+        button.addEventListener('click', function(){
+                tl.fromTo('.wallpaper-btn',{opacity: 0, y: -50},{opacity: 1, y: 0, ease: Bounce.easeOut})
+                tl.fromTo('.location-text',{x: -100, scale: 0},{x: 0, scale: 1},"<")
+                tl.fromTo('.location-p',{opacity: 0, x: -100},{opacity: 1, x: 0})
+        })
+})
+
