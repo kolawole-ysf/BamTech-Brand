@@ -179,7 +179,7 @@ li{
         transition: all 1s ease-in-out;
     }
     .anim{
-        animation: movin 2s linear forwards;
+        animation: movin 1s linear forwards;
        
     }
     .l1.anim{
@@ -307,7 +307,7 @@ li{
        align-items: center;
        justify-content: flex-end;
        position: absolute;
-       bottom: 20%;
+       bottom: 15%;
     }
     .car-btn button{
         border: 0;
@@ -327,5 +327,26 @@ li{
         height: 60vh;
         background-color: whitesmoke;
     }
-    
+    .footer .container{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 50px;
+    }
+    .footer .container h3{
+        color: white;
+        font-size: 20px;
+    }
+    .footer-ul{
+        padding:10px  0px;
+        margin: 0;
+    }
+    .footer-ul li{
+        line-height: 32px;
+    }
+    .footer-ul li a{
+        color:darkgray!important;
+        font-size: 14px;
+    }
 }

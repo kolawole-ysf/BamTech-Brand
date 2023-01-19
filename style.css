@@ -374,4 +374,34 @@ em{
     border: 0;
     color: lightgreen;
 }
-
+/* -------------Footer section------------ */
+.footer{
+    background-color: black;
+    width: 100%;
+    padding: 20px;
+}
+.footer .container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 50px;
+}
+.footer .container h3{
+    color: white;
+}
+.footer-ul{
+    padding:20px  0px;
+    margin: 0;
+}
+.footer-ul li{
+    line-height: 32px;
+}
+.footer-ul li a{
+    color:darkgray!important;
+    font-size: 16px;
+}
+.footer-ul li a:hover{
+    color:lightgreen!important;
+    font-size: 16px;
+}
