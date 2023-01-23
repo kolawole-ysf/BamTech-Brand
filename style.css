@@ -378,7 +378,7 @@ em{
 .footer{
     background-color: black;
     width: 100%;
-    padding: 20px;
+    padding-top: 20px;
 }
 .footer .container{
     display: flex;
@@ -404,4 +404,9 @@ em{
 .footer-ul li a:hover{
     color:lightgreen!important;
     font-size: 16px;
+}
+.copyright{
+    width: 100%;
+    padding: 10px 0px;
+    text-align: center;
 }
